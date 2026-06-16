@@ -1,0 +1,23 @@
+{
+  "stubbed": false,
+  "package": {
+    "repo": "terrarium",
+    "npmName": "@os-eco/terrarium-cli",
+    "packageRevision": 2,
+    "sourceRev": "cc06fe3e7884c13a79718900d12ab336e24f4051",
+    "sourceHash": "sha256-Lq5B88bRkt6Gs+pnbxdwxGlgdfGuvhhOPCUyI2HNSzw="
+  },
+  "binary": {
+    "name": "terrarium",
+    "upstreamName": "terrarium",
+    "entrypoint": "src/index.ts",
+    "aliases": [
+      "tl"
+    ]
+  },
+  "meta": {
+    "description": "Git-native specs, plans, and handoff artifacts for the os-eco toolchain",
+    "homepage": "https://github.com/RogerNavelsaker/terrarium#readme",
+    "licenseSpdx": "MIT"
+  }
+}
