@@ -11,9 +11,7 @@
     "name": "terrarium",
     "upstreamName": "terrarium",
     "entrypoint": "src/index.ts",
-    "aliases": [
-      "tl"
-    ]
+    "aliases": []
   },
   "meta": {
     "description": "Git-native specs, plans, and handoff artifacts for the os-eco toolchain",
