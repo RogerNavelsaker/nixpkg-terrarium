@@ -5,8 +5,8 @@
     "npmName": "terrarium",
     "version": "0.1.0",
     "packageRevision": 1,
-    "sourceRev": "a7b513fb2768fbf73acfe2c691f2942121f665ff",
-    "sourceHash": "sha256-ojXSYenXWEl7gjuNOhJ536g5n88loepaIw2Sj+wI2Vk="
+    "sourceRev": "afeec9cc0b7e6e7f4315647e4556afe42e140897",
+    "sourceHash": "sha256-YZpMws2/pxzViSHiz1N3ehzQKZiWfNBGYnV3qQe8/4k="
   },
   "binary": {
     "name": "terrarium",
@@ -18,7 +18,7 @@
   },
   "meta": {
     "description": "CLI tool for graph analysis, designed for agents and tools.",
-    "homepage": "https://github.com/jayminwest/terrarium#readme",
+    "homepage": "https://github.com/RogerNavelsaker/terrarium#readme",
     "licenseSpdx": "MIT"
   }
 }

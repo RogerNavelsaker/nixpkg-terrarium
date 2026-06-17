@@ -30,11 +30,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jayminwest/terrarium.git"
+    "url": "https://github.com/RogerNavelsaker/terrarium.git"
   },
-  "homepage": "https://github.com/jayminwest/terrarium#readme",
+  "homepage": "https://github.com/RogerNavelsaker/terrarium#readme",
   "bugs": {
-    "url": "https://github.com/jayminwest/terrarium/issues"
+    "url": "https://github.com/RogerNavelsaker/terrarium/issues"
   },
   "keywords": [
     "os-eco",
