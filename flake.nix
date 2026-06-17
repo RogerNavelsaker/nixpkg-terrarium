@@ -1,5 +1,5 @@
 {
-  description = "Nix packaging scaffold for @os-eco/terrarium-cli";
+  description = "Nix packaging scaffold for terrarium";
 
   nixConfig = {
     extra-substituters = [

@@ -2,19 +2,22 @@
   "stubbed": false,
   "package": {
     "repo": "terrarium",
-    "npmName": "@os-eco/terrarium-cli",
-    "packageRevision": 2,
-    "sourceRev": "cc06fe3e7884c13a79718900d12ab336e24f4051",
-    "sourceHash": "sha256-Lq5B88bRkt6Gs+pnbxdwxGlgdfGuvhhOPCUyI2HNSzw="
+    "npmName": "terrarium",
+    "version": "0.1.0",
+    "packageRevision": 1,
+    "sourceRev": "379c7d497e2641d857a12248d56846a6da2066a6",
+    "sourceHash": "sha256-4zr/N+bmja+hRju3TgpzI2IIAJuX7b8MSbCdUmcOLOU="
   },
   "binary": {
     "name": "terrarium",
     "upstreamName": "terrarium",
     "entrypoint": "src/index.ts",
-    "aliases": []
+    "aliases": [
+      "tr"
+    ]
   },
   "meta": {
-    "description": "Git-native specs, plans, and handoff artifacts for the os-eco toolchain",
+    "description": "CLI tool for seeds graph analysis, designed for agents and tools.",
     "homepage": "https://github.com/RogerNavelsaker/terrarium#readme",
     "licenseSpdx": "MIT"
   }

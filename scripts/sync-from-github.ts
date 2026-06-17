@@ -1,4 +1,4 @@
-const sourceRepo = "https://github.com/RogerNavelsaker/terrarium.git";
+const sourceRepo = "https://github.com/RogerNavelsaker/trellis.git";
 const manifestPath = "nix/package-manifest.json";
 const packageJsonPath = "package.json";
 
@@ -57,7 +57,7 @@ async function cloneSource(tempDir: string, mode: SyncMode) {
 export async function syncFromGitHub(mode: SyncMode) {
   const manifest = await Bun.file(manifestPath).json();
   const packageJson = await Bun.file(packageJsonPath).json();
-  const tempDir = await run(["mktemp", "-d", `${Bun.env.TMPDIR ?? "/tmp"}/terrarium-sync-XXXXXX`]);
+  const tempDir = await run(["mktemp", "-d", `${Bun.env.TMPDIR ?? "/tmp"}/trellis-sync-XXXXXX`]);
 
   try {
     const { sourceTag } = await cloneSource(tempDir, mode);
@@ -67,7 +67,7 @@ export async function syncFromGitHub(mode: SyncMode) {
     const prefetchHash = await run([
       "nix-prefetch-url",
       "--unpack",
-      `https://github.com/RogerNavelsaker/terrarium/archive/${sourceRev}.tar.gz`,
+      `https://github.com/RogerNavelsaker/trellis/archive/${sourceRev}.tar.gz`,
     ]);
     const sourceHash = await run(["nix", "hash", "to-sri", "--type", "sha256", prefetchHash.split("\n")[0]]);
 
@@ -111,10 +111,6 @@ export async function syncFromGitHub(mode: SyncMode) {
 
     await Bun.write(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
     await Bun.write(packageJsonPath, `${JSON.stringify(packageJson, null, 2)}\n`);
-
-    // Ensure bun.lock and bun.nix are updated to reflect the new devDependencies
-    await run(["bun", "install"]);
-    await run(["bun", "run", "postinstall"]);
 
     console.log(
       JSON.stringify(

@@ -28,7 +28,7 @@ EOF
   ) aliasOutputs;
   src = fetchFromGitHub {
     owner = "RogerNavelsaker";
-    repo = "terrarium";
+    repo = "trellis";
     rev = manifest.package.sourceRev;
     hash = manifest.package.sourceHash;
   };
@@ -51,24 +51,11 @@ EOF
     postInstall = ''
       mkdir -p "$out/libexec"
       mv "$out/bin/${manifest.binary.name}" "$out/libexec/${manifest.binary.name}"
-      mkdir -p "$out/share/${manifest.binary.name}/skill"
-      cp ${../skill/SKILL.md} "$out/share/${manifest.binary.name}/skill/SKILL.md"
       cat > "$out/bin/${manifest.binary.name}" <<EOF
 #!${lib.getExe bash}
-if [ "\$1" = "skill" ]; then
-  cat "$out/share/${manifest.binary.name}/skill/SKILL.md"
-  exit 0
-fi
 exec "$out/libexec/${manifest.binary.name}" "\$@"
 EOF
       chmod +x "$out/bin/${manifest.binary.name}"
-      "$out/bin/${manifest.binary.name}" completions bash > "$TMPDIR/${manifest.binary.name}.bash"
-      "$out/bin/${manifest.binary.name}" completions fish > "$TMPDIR/${manifest.binary.name}.fish"
-      "$out/bin/${manifest.binary.name}" completions zsh > "$TMPDIR/_${manifest.binary.name}"
-      installShellCompletion --cmd ${manifest.binary.name} \
-        --bash "$TMPDIR/${manifest.binary.name}.bash" \
-        --fish "$TMPDIR/${manifest.binary.name}.fish" \
-        --zsh "$TMPDIR/_${manifest.binary.name}"
     '';
     meta = with lib; {
       description = manifest.meta.description;
