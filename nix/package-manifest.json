@@ -5,15 +5,15 @@
     "npmName": "terrarium",
     "version": "0.1.0",
     "packageRevision": 1,
-    "sourceRev": "6c6e1c68d17c6612045699f6d1e4ee4a1b12b9b8",
-    "sourceHash": "sha256-Ml1cCHsNJAsJbE+OmnCg2AHtkImr2ihL+WBMkoEJXO4="
+    "sourceRev": "2037d79b3c76fc7997301f74fcd0eb8e4bc8d9b1",
+    "sourceHash": "sha256-UxYY0AlLFHMXeaAVJXN+GBVY0xF7T+ecp2F1jR75vcI="
   },
   "binary": {
     "name": "terrarium",
     "upstreamName": "terrarium",
     "entrypoint": "src/index.ts",
     "aliases": [
-      "trm"
+      "tr"
     ]
   },
   "meta": {
