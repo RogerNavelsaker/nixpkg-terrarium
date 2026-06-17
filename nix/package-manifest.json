@@ -5,8 +5,8 @@
     "npmName": "terrarium",
     "version": "0.1.0",
     "packageRevision": 1,
-    "sourceRev": "c94aca1444e466c6e3a4eb653a86828e70b113a2",
-    "sourceHash": "sha256-VxTYaOmW+ooI/2rOfQs4vjJsrcmIVZ8LP03jawunVSs="
+    "sourceRev": "7a204b87279ec517883e901c91440a04735c9ece",
+    "sourceHash": "sha256-a4FolVgg2tO1l58uhVxqRAsfZP2qBTLLbLhqUPuS3y0="
   },
   "binary": {
     "name": "terrarium",
