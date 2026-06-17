@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "Checking nix flake and building default package..."
+nix flake check || { echo "nix flake check failed"; exit 1; }
+nix build .#default || { echo "nix build failed"; exit 1; }
+echo "Nix build successful. Pushing..."
