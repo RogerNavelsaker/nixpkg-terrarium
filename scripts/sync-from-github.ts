@@ -1,4 +1,4 @@
-const sourceRepo = "https://github.com/RogerNavelsaker/trellis.git";
+const sourceRepo = "https://github.com/RogerNavelsaker/terrarium.git";
 const manifestPath = "nix/package-manifest.json";
 const packageJsonPath = "package.json";
 
@@ -57,7 +57,7 @@ async function cloneSource(tempDir: string, mode: SyncMode) {
 export async function syncFromGitHub(mode: SyncMode) {
   const manifest = await Bun.file(manifestPath).json();
   const packageJson = await Bun.file(packageJsonPath).json();
-  const tempDir = await run(["mktemp", "-d", `${Bun.env.TMPDIR ?? "/tmp"}/trellis-sync-XXXXXX`]);
+  const tempDir = await run(["mktemp", "-d", `${Bun.env.TMPDIR ?? "/tmp"}/terrarium-sync-XXXXXX`]);
 
   try {
     const { sourceTag } = await cloneSource(tempDir, mode);
@@ -67,7 +67,7 @@ export async function syncFromGitHub(mode: SyncMode) {
     const prefetchHash = await run([
       "nix-prefetch-url",
       "--unpack",
-      `https://github.com/RogerNavelsaker/trellis/archive/${sourceRev}.tar.gz`,
+      `https://github.com/RogerNavelsaker/terrarium/archive/${sourceRev}.tar.gz`,
     ]);
     const sourceHash = await run(["nix", "hash", "to-sri", "--type", "sha256", prefetchHash.split("\n")[0]]);
 
